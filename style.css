@@ -1,0 +1,128 @@
+/* Jack (John) Colquhoun */
+/* I did make use of AI to help with some formatting within CSS, such as a circular portait, and section blocks. */
+/* I also did use some style from the first linked demo for my contact information */
+
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+}
+
+/* Background Image with Transparency */
+/* need position: fixed; and top: 0; left: 0; */
+body:before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+    z-index: -1;
+}
+img{
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%; 
+}
+.section-block {
+    background-color: #f4f4f4;  
+    padding: 20px;               
+    margin: 20px 0;              
+    border-radius: 8px;         
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+ul{
+    padding-left: 20px;
+}
+footer{
+    background-color: #f4f4f4;  
+    padding: 20px;               
+    margin: 20px 0;              
+    border-radius: 8px;         
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    opacity: 0.8;;
+}
+
+
+.section-block ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.section-block ul li {
+    background-color: #e0e0e0;
+    padding: 10px 15px;
+    border-radius: 20px;
+    flex: 1 1 150px;
+    text-align: center;
+}
+
+.contact-flex{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between; 
+    gap: 20px;
+    padding-top: 5px;
+}
+
+.contact-flex a {
+    background-color: #e0e0e0;
+    padding: 8px 16px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+.contact-flex a:hover {
+    background-color: #d4d4d4;
+}
+
+.turtle {
+    display: block;
+    margin: 0 auto 20px auto; /* Center horizontally, add bottom margin */
+    border-radius: 15px;      /* Rounded corners similar to your sections */
+    border: 4px solid #e0e0e0; /* Light gray border matching bubble backgrounds */
+    max-width: 100%;          /* Responsive */
+    height: auto;             /* Maintain aspect ratio */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+  }
+
+  .code-container {
+    background-color: #2d3748;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    overflow-x: auto;
+    border-left: 4px solid #4299e1;
+}
+.code-container code {
+    color: #edf2f7; /* Light gray text */
+    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+    font-size: 0.95rem;
+    display: block;
+    white-space: pre;
+}
+

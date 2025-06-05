@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+  <link rel="stylesheet" href="style.css">
+  <title>Refactored Turtle Code</title>
+</head>
+<body>
+  <header class="section-block">
+    <h1> Project 5: Refactored Turtle Code</h1>
+  </header>
+
+  <main>
+    <section class="section-block">
+      <h2>About the Project</h2>
+      <p>
+        For this project we refactored our original turtle code in order to be more efficient in creating graphics. We did this by creating functions and for loops for different
+        aspects of the graphic. For example, instead of repeating single lines of code to command the turtle to create a graphic, you simply call a previously made function. 
+        This allows you to create much more detailed graphics as well as learning how to write efficient code with Python.
+      </p>
+    </section>
+
+    <section class="section-block">
+      <h2>Sample Code</h2>
+      <div class="code-container">
+        <pre><code>
+def draw_cloud(t, x, y, size=1.0):
+    """Draw a cloud made of multiple overlapping circles"""
+    jump_to(t, x, y)
+    t.pencolor("white")
+
+    # Draw multiple overlapping circles to form a cloud
+    positions = [(0, 0), (size * 15, size * 10), (size * 30, 0),
+                 (size * 45, size * 5), (size * 60, 0)]
+
+    for pos_x, pos_y in positions:
+        jump_to(t, x + pos_x, y + pos_y)
+        draw_circle(t, size * 20, "white")
+        </code></pre>
+      </div>
+    </section>
+
+    <section class="section-block">
+      <h2>Final Image</h2>
+      <img src="turtle.png" alt="Turtle Graphic Image" class="turtle" width="600" height="600">
+    </section>
+
+    <div class="contact-flex">
+      <a href="index.html">← Back to About Me</a>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 Jack Colquhoun
+  </footer>
+</body>
+</html>
+
